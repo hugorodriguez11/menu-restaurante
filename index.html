@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Terraza — Menú Digital</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <div class="header-content">
+      <p class="header-tag">Restaurante</p>
+      <h1>La Terraza</h1>
+      <p class="header-sub">Cocina mexicana de autor · Ciudad de México</p>
+      <div class="header-info">
+        <span>📍 Condesa, CDMX</span>
+        <span>🕐 Mar–Dom 13:00–23:00</span>
+        <span>📞 55 1234 5678</span>
+      </div>
+    </div>
+  </header>
+
+  <nav class="categorias">
+    <button class="cat-btn active" data-cat="todos">Todos</button>
+    <button class="cat-btn" data-cat="entradas">Entradas</button>
+    <button class="cat-btn" data-cat="principales">Principales</button>
+    <button class="cat-btn" data-cat="postres">Postres</button>
+    <button class="cat-btn" data-cat="bebidas">Bebidas</button>
+  </nav>
+
+  <main class="menu-grid" id="menu-grid"></main>
+
+  <section class="reservacion">
+    <div class="reservacion-content">
+      <h2>Haz tu reservación</h2>
+      <p>Reserva tu mesa con anticipación y disfruta de la mejor experiencia.</p>
+      <form id="form-reserva">
+        <div class="form-row">
+          <input type="text" placeholder="Tu nombre" required>
+          <input type="tel" placeholder="WhatsApp" required>
+        </div>
+        <div class="form-row">
+          <input type="date" required>
+          <select required>
+            <option value="">Número de personas</option>
+            <option>1 persona</option>
+            <option>2 personas</option>
+            <option>3–4 personas</option>
+            <option>5 o más</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-reservar">Reservar por WhatsApp</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 La Terraza · Hecho con ❤️ en CDMX</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
