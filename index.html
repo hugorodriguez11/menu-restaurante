@@ -3,62 +3,157 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>La Terraza — Menú Digital</title>
+  <title>La Terraza — Cocina Mexicana de Autor</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <header>
-    <div class="header-content">
-      <p class="header-tag">Restaurante</p>
-      <h1>La Terraza</h1>
-      <p class="header-sub">Cocina mexicana de autor · Ciudad de México</p>
-      <div class="header-info">
-        <span>📍 Condesa, CDMX</span>
-        <span>🕐 Mar–Dom 13:00–23:00</span>
-        <span>📞 55 1234 5678</span>
-      </div>
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <p class="loader-text">La Terraza</p>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
     </div>
-  </header>
+  </div>
 
-  <nav class="categorias">
-    <button class="cat-btn active" data-cat="todos">Todos</button>
-    <button class="cat-btn" data-cat="entradas">Entradas</button>
-    <button class="cat-btn" data-cat="principales">Principales</button>
-    <button class="cat-btn" data-cat="postres">Postres</button>
-    <button class="cat-btn" data-cat="bebidas">Bebidas</button>
+  <nav id="navbar">
+    <div class="nav-inner">
+      <div class="nav-logo">La Terraza</div>
+      <div class="nav-links">
+        <a href="#menu">Menú</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#reservar">Reservar</a>
+      </div>
+      <div class="nav-info">Mar–Dom · 13:00–23:00</div>
+    </div>
   </nav>
 
-  <main class="menu-grid" id="menu-grid"></main>
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Cocina mexicana de autor</p>
+      <h1 class="hero-title">Una experiencia<br><em>inolvidable</em></h1>
+      <p class="hero-sub">Ingredientes de temporada · Condesa, CDMX</p>
+      <div class="hero-ctas">
+        <a href="#menu" class="btn-hero">Ver menú</a>
+        <a href="#reservar" class="btn-hero btn-hero-outline">Reservar mesa</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
 
-  <section class="reservacion">
-    <div class="reservacion-content">
-      <h2>Haz tu reservación</h2>
-      <p>Reserva tu mesa con anticipación y disfruta de la mejor experiencia.</p>
+  <section class="stats-bar">
+    <div class="stat-item"><strong>12</strong><span>Años de experiencia</span></div>
+    <div class="stat-divider"></div>
+    <div class="stat-item"><strong>4.9★</strong><span>Calificación en Google</span></div>
+    <div class="stat-divider"></div>
+    <div class="stat-item"><strong>48</strong><span>Platillos de temporada</span></div>
+    <div class="stat-divider"></div>
+    <div class="stat-item"><strong>100%</strong><span>Ingredientes locales</span></div>
+  </section>
+
+  <section class="menu-section" id="menu">
+    <div class="menu-header">
+      <p class="seccion-eyebrow">— Nuestra carta</p>
+      <h2>Menú del día</h2>
+    </div>
+    <div class="categorias" id="categorias"></div>
+    <div class="menu-grid" id="menu-grid"></div>
+  </section>
+
+  <section class="nosotros" id="nosotros">
+    <div class="nosotros-inner">
+      <div class="nosotros-texto">
+        <p class="seccion-eyebrow">— Nuestra historia</p>
+        <h2>Pasión por la cocina mexicana</h2>
+        <p>La Terraza nació en 2012 con una misión clara: rescatar los sabores tradicionales de México y presentarlos con una visión contemporánea. Cada platillo es un homenaje a nuestras raíces.</p>
+        <p>Trabajamos de la mano con productores locales de la Ciudad de México y sus alrededores para garantizar ingredientes frescos y de temporada en cada visita.</p>
+        <div class="chef-card">
+          <div class="chef-avatar">JM</div>
+          <div>
+            <p class="chef-nombre">Chef Jorge Mendoza</p>
+            <p class="chef-cargo">Chef ejecutivo · 20 años de experiencia</p>
+          </div>
+        </div>
+      </div>
+      <div class="nosotros-visual">
+        <div class="visual-card visual-card-1">🌮</div>
+        <div class="visual-card visual-card-2">🥑</div>
+        <div class="visual-card visual-card-3">🌶</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reservar" id="reservar">
+    <div class="reservar-inner">
+      <p class="seccion-eyebrow" style="color:rgba(255,255,255,.5)">— Reservaciones</p>
+      <h2>Reserva tu mesa</h2>
+      <p class="reservar-sub">Asegura tu lugar y disfruta de la mejor experiencia gastronómica de la Condesa.</p>
       <form id="form-reserva">
-        <div class="form-row">
-          <input type="text" placeholder="Tu nombre" required>
-          <input type="tel" placeholder="WhatsApp" required>
+        <div class="form-grid">
+          <div class="form-group">
+            <label>Nombre completo</label>
+            <input type="text" placeholder="Tu nombre" required>
+          </div>
+          <div class="form-group">
+            <label>WhatsApp</label>
+            <input type="tel" placeholder="55 1234 5678" required>
+          </div>
+          <div class="form-group">
+            <label>Fecha</label>
+            <input type="date" required>
+          </div>
+          <div class="form-group">
+            <label>Personas</label>
+            <select required>
+              <option value="">Selecciona</option>
+              <option>1 persona</option>
+              <option>2 personas</option>
+              <option>3–4 personas</option>
+              <option>5 o más</option>
+            </select>
+          </div>
         </div>
-        <div class="form-row">
-          <input type="date" required>
-          <select required>
-            <option value="">Número de personas</option>
-            <option>1 persona</option>
-            <option>2 personas</option>
-            <option>3–4 personas</option>
-            <option>5 o más</option>
-          </select>
+        <div class="form-group full">
+          <label>Ocasión especial (opcional)</label>
+          <input type="text" placeholder="Cumpleaños, aniversario, cena de negocios...">
         </div>
-        <button type="submit" class="btn-reservar">Reservar por WhatsApp</button>
+        <button type="submit" class="btn-reservar">Confirmar por WhatsApp 💬</button>
       </form>
     </div>
   </section>
 
   <footer>
-    <p>© 2026 La Terraza · Hecho con ❤️ en CDMX</p>
+    <div class="footer-inner">
+      <div class="footer-logo">La Terraza</div>
+      <div class="footer-info">
+        <p>📍 Av. Ámsterdam 210, Condesa, CDMX</p>
+        <p>📞 55 1234 5678</p>
+        <p>🕐 Martes a Domingo · 13:00 – 23:00</p>
+      </div>
+      <p class="footer-copy">© 2026 La Terraza · Todos los derechos reservados</p>
+    </div>
   </footer>
+
+  <div class="platillo-modal" id="modal">
+    <div class="modal-overlay" id="modal-overlay"></div>
+    <div class="modal-card" id="modal-card">
+      <button class="modal-close" id="modal-close">✕</button>
+      <div class="modal-emoji" id="modal-emoji"></div>
+      <div class="modal-body">
+        <span class="modal-cat" id="modal-cat"></span>
+        <h3 id="modal-nombre"></h3>
+        <p id="modal-desc"></p>
+        <div class="modal-footer">
+          <span class="modal-precio" id="modal-precio"></span>
+          <a href="#reservar" class="btn-modal" id="btn-modal-reservar">Reservar mesa →</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="app.js"></script>
 </body>
